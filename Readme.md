@@ -11,7 +11,7 @@
 <!-- default file list end -->
 # Grid View for ASP.NET Web Forms - How to update total summaries on the client side in Batch Edit mode
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t114923/)**
+**[[Run Online]](https://codecentral.devexpress.com/128536038/)**
 <!-- run online end -->
 
 <p>Starting with v18.2 we support callbacks and keep the changes safe while a user navigates via pages, filters and sorts the grid data. If you use this version and above, please copy the 18.2.3+ branch as approaches to update summaries differ in new versions and old ones.</p>
