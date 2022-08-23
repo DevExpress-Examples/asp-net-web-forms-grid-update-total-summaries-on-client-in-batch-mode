@@ -9,7 +9,7 @@
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
 <!-- default file list end -->
-# ASPxGridView - How to update total summaries on the client side in Batch Edit mode
+# Grid View for ASP.NET Web Forms - How to update total summaries on the client side in Batch Edit mode
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t114923/)**
 <!-- run online end -->
