@@ -3,25 +3,13 @@
 **[[Run Online]](https://codecentral.devexpress.com/128536038/)**
 <!-- run online end -->
 
-This example demonstrates how to create a templated column that displays the total summary in the footer. The summary is calculated dynamically in batch edit mode. In this example, the grid's [HighlightDeletedRows](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.HighlightDeletedRows) property is set to `false`.
+This example demonstrates how to replace a summary item with a custom footer template to calculate the total summary dynamically in batch edit mode. In this example, the grid's [HighlightDeletedRows](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.HighlightDeletedRows) property is set to `false`.
 
 ![Update total summaries](totalSummary.png)
 
 ## Overview
 
-1. Specify a column's [FooterTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewColumn.FooterTemplate) property and add a label to the template to display the result of total summary calculation.
-
-    ```aspx
-    <dx:GridViewDataSpinEditColumn Width="100" FieldName="C2">
-        <FooterTemplate>
-            Sum =
-            <dx:ASPxLabel ID="ASPxLabel1" runat="server" ClientInstanceName="labelSum"
-                Text='<%# GetTotalSummaryValue() %>' />
-        </FooterTemplate>
-    </dx:GridViewDataSpinEditColumn>
-    ```
-
-2. Add a total summary item for the corresponding column. Use the item's [Tag](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSummaryItemBase.Tag) property to identify the summary item and get its value.
+1. Add a total summary item for the corresponding column. Use the item's [Tag](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSummaryItemBase.Tag) property to identify the summary item and get its value.
 
     ```aspx
     <TotalSummary>
@@ -34,6 +22,18 @@ This example demonstrates how to create a templated column that displays the tot
         ASPxSummaryItem summaryItem = Grid.TotalSummary.First(i => i.Tag == "C2_Sum");
         return Grid.GetTotalSummaryValue(summaryItem);
     }
+    ```
+
+2. Replace the summary item with a custom [footer template](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewColumn.FooterTemplate).
+
+    ```aspx
+    <dx:GridViewDataSpinEditColumn Width="100" FieldName="C2">
+        <FooterTemplate>
+            Sum =
+            <dx:ASPxLabel ID="ASPxLabel1" runat="server" ClientInstanceName="labelSum"
+                Text='<%# GetTotalSummaryValue() %>' />
+        </FooterTemplate>
+    </dx:GridViewDataSpinEditColumn>
     ```
 
 3. Handle the grid's client-side [BatchEditEndEditing](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditEndEditing) and [BatchEditRowDeleting](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditRowDeleting) events. In handlers, use the grid's [batchEditApi.GetCellValue](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewBatchEditApi.GetCellValue(visibleIndex-columnFieldNameOrId)) method to get initial cell values and `rowValues` argument property to get new cell values. Then recalculate the summary value and assign it to the label.
