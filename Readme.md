@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Grid View for ASP.NET Web Forms - How to update total summaries on the client in batch edit mode
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128536038/)**
-<!-- run online end -->
 
 This example demonstrates how to replace a summary item with a custom footer template to calculate the total summary dynamically in batch edit mode. In this example, the grid's [HighlightDeletedRows](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.HighlightDeletedRows) property is set to `false`.
 
