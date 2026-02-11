@@ -75,7 +75,7 @@ This example demonstrates how to replace a summary item with a custom footer tem
 * [Grid View for ASP.NET Web Forms - How to calculate values and total summaries dynamically in batch edit mode](https://github.com/DevExpress-Examples/aspxgridview-batch-edit-how-to-calculate-unbound-column-and-total-summary-values-on-the-fly-t116925)
 * [Grid View for ASP.NET Web Forms - How to update total summaries in batch edit mode when deleted rows are highlighted](https://github.com/DevExpress-Examples/aspxgridview-batch-editing-how-to-update-summaries-when-highlightdeletedrowstrue-t517531)
 <!-- feedback -->
-## Does This Example Address Your Development Requirements/Objectives?
+## Does this example address your development requirements/objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-grid-update-total-summaries-on-client-in-batch-mode&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-grid-update-total-summaries-on-client-in-batch-mode&~~~was_helpful=no)
 
